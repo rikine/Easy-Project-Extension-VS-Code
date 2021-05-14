@@ -1,0 +1,14 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "C++ Debug",
+            "type": "lldb",
+            "request": "launch",
+            "program": "${workspaceFolder}/bin/main",
+            "preLaunchTask": "Build C++ project",
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}

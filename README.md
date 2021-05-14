@@ -9,10 +9,14 @@
         Mac OS with installed XCode or Developer Tools.
       </li>
       <li>
-        Linux with installed GCC/g++
+        Linux with installed g++
       </li>
       <li>
-        Windows with istalled MinGW
+        Windows with istalled powershell, MinGW(g++) and make or WSL
+        <br>
+        If you use powershell, you should add make to it with for example "Set-Alias make C:\msys64\usr\bin\make.exe"
+        <br>
+        You can download make with MinGW here: <a href="https://www.msys2.org/">MSYS2</a>
       </li>
     </ul>
   </article>
