@@ -1,4 +1,4 @@
-#include <test.h>
+#include "test/test.h"
 #include <iostream>
 
 test::test(int a) : a(a)
