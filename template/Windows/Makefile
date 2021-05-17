@@ -43,7 +43,7 @@ run: clean all
 # To get them should be used $^.
 # After all prerequisites it compile the executable with given params
 # $@ - equal to $(EXECUTABLE)
-$(BIN)/$(EXECUTABLE): $(SRC)/*.cpp $(SRC)/**/*.cpp
+$(BIN)/$(EXECUTABLE): $(SRC)/*.cpp
 	$(CXX) $(CXX_FLAGS) -I$(INCLUDE)  -L$(LIB) $^ -o $@ $(LIBRARIES)
 
 # clean is a target which clean folder <bin>

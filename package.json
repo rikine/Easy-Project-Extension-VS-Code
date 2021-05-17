@@ -19,6 +19,7 @@
     "onCommand:easyprojectc.createProject",
     "onCommand:easyprojectc.changeExecutable",
     "onCommand:easyprojectc.changeDebugOrRelease",
+    "onCommand:easyprojectc.allowFolders",
     "workspaceContains:Makefile"
   ],
   "main": "./out/extension.js",
@@ -35,6 +36,10 @@
       {
         "command": "easyprojectc.changeDebugOrRelease",
         "title": "Easy Project: Set debug or release version"
+      },
+      {
+        "command": "easyprojectc.allowFolders",
+        "title": "Easy Project: Allow multiple folders in src"
       }
     ]
   },
