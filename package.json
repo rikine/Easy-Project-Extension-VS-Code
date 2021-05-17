@@ -1,5 +1,5 @@
 {
-  "name": "easy-project-c--",
+  "name": "easyprojectc",
   "displayName": "Easy Project C++",
   "description": "Create easy C++ project",
   "version": "0.1.1",
@@ -16,24 +16,24 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:easy-project-c--.createProject",
-    "onCommand:easy-project-c--.changeExecutable",
-    "onCommand:easy-project-c--.changeDebugOrRelease",
+    "onCommand:easyprojectc.createProject",
+    "onCommand:easyprojectc.changeExecutable",
+    "onCommand:easyprojectc.changeDebugOrRelease",
     "workspaceContains:Makefile"
   ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "easy-project-c--.createProject",
+        "command": "easyprojectc.createProject",
         "title": "Easy Project: Create Project"
       },
       {
-        "command": "easy-project-c--.changeExecutable",
+        "command": "easyprojectc.changeExecutable",
         "title": "Easy Project: Change name of Executable"
       },
       {
-        "command": "easy-project-c--.changeDebugOrRelease",
+        "command": "easyprojectc.changeDebugOrRelease",
         "title": "Easy Project: Set debug or release version"
       }
     ]

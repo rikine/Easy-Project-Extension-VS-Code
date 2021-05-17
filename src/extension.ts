@@ -4,9 +4,9 @@ import { createProject } from './createProj';
 import { changeDebugOrRelease } from './changeDebugOrRel'
 
 export function activate(context: vscode.ExtensionContext) {
-	let createProjectCommand = vscode.commands.registerCommand('easy-project-c--.createProject', createProject);
-	let changeNameOfExecutableCommand = vscode.commands.registerCommand('easy-project-c--.changeExecutable', changeExecutable);
-	let changeDebugOrReleaseCommand = vscode.commands.registerCommand('easy-project-c--.changeDebugOrRelease', changeDebugOrRelease);
+	let createProjectCommand = vscode.commands.registerCommand('easyprojectc.createProject', createProject);
+	let changeNameOfExecutableCommand = vscode.commands.registerCommand('easyprojectc.changeExecutable', changeExecutable);
+	let changeDebugOrReleaseCommand = vscode.commands.registerCommand('easyprojectc.changeDebugOrRelease', changeDebugOrRelease);
 
 	let buildProjectButton = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Left, -99);
 	buildProjectButton.command = 'workbench.action.tasks.build';
