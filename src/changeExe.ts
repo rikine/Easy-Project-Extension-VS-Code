@@ -1,6 +1,7 @@
 import * as vscode from 'vscode';
 import { writeFileSync, existsSync, readFileSync } from 'fs';
 import { join } from 'path';
+import * as os from 'os';
 
 export const changeExecutable = async () => {
     if (!vscode.workspace.workspaceFolders) {
@@ -32,6 +33,9 @@ export const changeExecutable = async () => {
 const changeNameOfExecutable = async (nameOfExe: string, workspaceFolder: vscode.Uri) => {
     if (existsSync(join(workspaceFolder.fsPath, ".vscode", "launch.json"))) {
         nameOfExe = nameOfExe.trim();
+        if (os.type() == "Windows_NT") {
+            nameOfExe = nameOfExe + ".exe";
+        }
         // const launchConfigs: any = vscode.workspace.getConfiguration('launch', workspaceFolder).get("configurations");
         // launchConfigs[0]["program"] = "${workspaceFolder}/bin/" + nameOfExe;
         // vscode.workspace.getConfiguration('launch', workspaceFolder).update("configurations", launchConfigs);
