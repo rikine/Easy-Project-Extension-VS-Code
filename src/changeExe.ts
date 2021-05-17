@@ -26,7 +26,12 @@ export const changeExecutable = async () => {
             vscode.window.showErrorMessage(`Easy Project C++: Couldn't change name of Executable.\n${error}`);
         }
     } else {
-        await changeNameOfExecutable(nameOfExe, vscode.workspace.workspaceFolders[0].uri);
+        try {
+            await changeNameOfExecutable(nameOfExe, vscode.workspace.workspaceFolders[0].uri);
+            vscode.window.showInformationMessage("Easy Project C++: Name of executable was changed to " + nameOfExe);
+        } catch (error) {
+            vscode.window.showErrorMessage(`Easy Project C++: Couldn't change name of Executable.\n${error}`);
+        }
     }
 };
 
