@@ -7,12 +7,16 @@
     <ul>
       <li>
         Mac OS with installed XCode or Developer Tools.
+        <br>
+        You can download it with: xcode-select --install
       </li>
       <li>
-        Linux with installed g++
+        Linux with installed g++.
+        <br>
+        You can download it with: sudo apt-get install g++ make gdb
       </li>
       <li>
-        Windows with istalled powershell, MinGW(g++) and make or WSL
+        Windows with installed powershell, MinGW(g++) and make or WSL
         <br>
         If you use powershell, you should add make to it with for example "Set-Alias make C:\msys64\usr\bin\make.exe"
         <br>
@@ -23,7 +27,7 @@
  <article>
    <strong>How to use?</strong>
    <p>
-    In process
+    
    </p>
  </article>
 </main>

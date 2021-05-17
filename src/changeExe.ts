@@ -20,21 +20,24 @@ export const changeExecutable = async () => {
                 return;
             }
             await changeNameOfExecutable(nameOfExe, chosen.uri);
+            vscode.window.showInformationMessage("Easy Project C++: Name of executable was changed to " + nameOfExe);
         } catch (error) {
             vscode.window.showErrorMessage(`Easy Project C++: Couldn't change name of Executable.\n${error}`);
         }
     } else {
         await changeNameOfExecutable(nameOfExe, vscode.workspace.workspaceFolders[0].uri);
     }
-    vscode.window.showInformationMessage("Easy Project C++: Name of executable was changed to " + nameOfExe);
 };
 
 const changeNameOfExecutable = async (nameOfExe: string, workspaceFolder: vscode.Uri) => {
     if (existsSync(join(workspaceFolder.fsPath, ".vscode", "launch.json"))) {
         nameOfExe = nameOfExe.trim();
-        const launchConfigs: any = vscode.workspace.getConfiguration('launch', workspaceFolder).get("configurations");
-        launchConfigs[0]["program"] = "${workspaceFolder}/bin/" + nameOfExe;
-        vscode.workspace.getConfiguration('launch', workspaceFolder).update("configurations", launchConfigs);
+        // const launchConfigs: any = vscode.workspace.getConfiguration('launch', workspaceFolder).get("configurations");
+        // launchConfigs[0]["program"] = "${workspaceFolder}/bin/" + nameOfExe;
+        // vscode.workspace.getConfiguration('launch', workspaceFolder).update("configurations", launchConfigs);
+        let data = JSON.parse(readFileSync(join(workspaceFolder.fsPath, ".vscode", "launch.json")).toString());
+        data["configurations"][0]["program"] = "${workspaceFolder}/bin/" + nameOfExe;
+        writeFileSync(join(workspaceFolder.fsPath, ".vscode", "launch.json"), JSON.stringify(data, null, '\t'));
     }
     if (existsSync(join(workspaceFolder.fsPath, "Makefile"))) {
         let makeFile = readFileSync(join(workspaceFolder.fsPath, "Makefile")).toString();

@@ -1,3 +1,5 @@
+import { existsSync, readFileSync, writeFileSync } from 'fs';
+import { join } from 'path';
 import * as vscode from 'vscode';
 
 export const changeDebugOrRelease = async () => {
@@ -28,16 +30,24 @@ export const changeDebugOrRelease = async () => {
         } else {
             await setDebugOrRelease(Argument, vscode.workspace.workspaceFolders[0].uri);
         }
+        vscode.window.showInformationMessage("Easy Project C++: Configuration was changed to " + selected);
     } catch (error) {
         vscode.window.showErrorMessage(`Easy Project C++: Couldn't set debug or release.\n${error}`);
     }
-    vscode.window.showInformationMessage("Easy Project C++: Configuration was changed to " + selected);
 };
 
 const setDebugOrRelease = async (Argument: string, workspaceFolder: vscode.Uri) => {
-    const tasksConfigs: any = vscode.workspace.getConfiguration('tasks', workspaceFolder).get("tasks");
-    for (let task in tasksConfigs) {
-        tasksConfigs[task]["args"][0] = "DEBUG=" + Argument;
-        vscode.workspace.getConfiguration('tasks', workspaceFolder).update("tasks", tasksConfigs);
+    if (existsSync(join(workspaceFolder.fsPath, ".vscode", "tasks.json"))) {
+        let data = JSON.parse(readFileSync(join(workspaceFolder.fsPath, ".vscode", "tasks.json")).toString());
+        for (let task in data["tasks"]) {
+            data["tasks"][task]["args"][0] = "DEBUG=" + Argument;
+        }
+        writeFileSync(join(workspaceFolder.fsPath, ".vscode", "tasks.json"), JSON.stringify(data, null, '\t'));
     }
+
+    // const tasksConfigs: any = vscode.workspace.getConfiguration('tasks', workspaceFolder).get("tasks");
+    // for (let task in tasksConfigs) {
+    //     tasksConfigs[task]["args"][0] = "DEBUG=" + Argument;
+    //     vscode.workspace.getConfiguration('tasks', workspaceFolder).update("tasks", tasksConfigs);
+    // }
 }
