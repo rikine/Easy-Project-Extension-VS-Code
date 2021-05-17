@@ -45,7 +45,7 @@
  </article>
  <article>
    <h3>
-      Additionally
+    Additionally
    </h3>
    <p>
     You can use any compiler but should change one line in Makefile.
