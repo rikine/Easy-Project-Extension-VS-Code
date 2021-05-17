@@ -12,6 +12,10 @@
         {
             "name": "hotfix/changeNameOfExtension",
             "base": "main"
+        },
+        {
+            "name": "hotfix/removeTroubles",
+            "base": "main"
         }
     ]
 }
