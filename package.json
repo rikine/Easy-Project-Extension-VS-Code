@@ -17,7 +17,8 @@
   ],
   "activationEvents": [
     "onCommand:easy-project-c--.createProject",
-    "onCommand:easy-project-c--.changeExecutable"
+    "onCommand:easy-project-c--.changeExecutable",
+    "onCommand:easy-project-c--.changeDebugOrRelease"
   ],
   "main": "./out/extension.js",
   "contributes": {
@@ -29,6 +30,10 @@
       {
         "command": "easy-project-c--.changeExecutable",
         "title": "Easy Project: Change name of Executable"
+      },
+      {
+        "command": "easy-project-c--.changeDebugOrRelease",
+        "title": "Easy Project: Set debug or release version"
       }
     ]
   },
