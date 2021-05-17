@@ -2,7 +2,7 @@
   "name": "easy-project-c--",
   "displayName": "Easy Project C++",
   "description": "Create easy C++ project",
-  "version": "0.0.1",
+  "version": "0.1.1",
   "engines": {
     "vscode": "^1.56.0"
   },
