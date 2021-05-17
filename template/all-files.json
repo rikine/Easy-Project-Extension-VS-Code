@@ -1,0 +1,48 @@
+{
+    "version": "0",
+    "directories": [
+        ".vscode",
+        "bin",
+        "include",
+        "lib",
+        "src"
+    ],
+    "templates": {
+        "[G++/GDB] Linux": {
+            "files": {
+                "Linux/Makefile": "Makefile",
+                "Linux/.vscode/tasks.json": ".vscode/tasks.json",
+                "Linux/.vscode/launch.json": ".vscode/launch.json",
+                "Linux/.vscode/c_cpp_properties.json": ".vscode/c_cpp_properties.json",
+                "Linux/src/main.cpp": "src/main.cpp"
+            },
+            "openFiles": [
+                "src/main.cpp"
+            ]
+        },
+        "[Clang++/LLDB] macOS": {
+            "files": {
+                "Mac_OS/Makefile": "Makefile",
+                "Mac_OS/.vscode/tasks.json": ".vscode/tasks.json",
+                "Mac_OS/.vscode/launch.json": ".vscode/launch.json",
+                "Mac_OS/.vscode/c_cpp_properties.json": ".vscode/c_cpp_properties.json",
+                "Mac_OS/src/main.cpp": "src/main.cpp"
+            },
+            "openFiles": [
+                "src/main.cpp"
+            ]
+        },
+        "[MinGW] Windows": {
+            "files": {
+                "Windows/Makefile": "Makefile",
+                "Windows/.vscode/tasks.json": ".vscode/tasks.json",
+                "Windows/.vscode/launch.json": ".vscode/launch.json",
+                "Windows/.vscode/c_cpp_properties.json": ".vscode/c_cpp_properties.json",
+                "Windows/src/main.cpp": "src/main.cpp"
+            },
+            "openFiles": [
+                "src/main.cpp"
+            ]
+        }
+    }
+}
