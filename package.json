@@ -16,7 +16,8 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:easy-project-c--.createProject"
+    "onCommand:easy-project-c--.createProject",
+    "onCommand:easy-project-c--.changeExecutable"
   ],
   "main": "./out/extension.js",
   "contributes": {
@@ -24,6 +25,10 @@
       {
         "command": "easy-project-c--.createProject",
         "title": "Easy Project: Create Project"
+      },
+      {
+        "command": "easy-project-c--.changeExecutable",
+        "title": "Easy Project: Change name of Executable"
       }
     ]
   },
