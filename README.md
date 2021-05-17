@@ -11,7 +11,7 @@
         Or you can run this command from the command palette: ext install ms-vscode.cpptools
       </li>
       <li>
-        Mac OS with installed XCode or Developer Tools.
+        Mac OS with installed XCode or Developer Tools and <a href="https://marketplace.visualstudio.com/items?itemName=vadimcn.vscode-lldb">Native debugger based on LLDB</a>
         <br>
         You can download it with: xcode-select --install
       </li>
