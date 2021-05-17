@@ -1,10 +1,5 @@
 {
-    "gitflow4code.features": [
-        {
-            "name": "feature/AddExtension",
-            "base": "develop"
-        }
-    ],
+    "gitflow4code.features": [],
     "files.exclude": {
         "out": false // set this to true to hide the "out" folder with the compiled JS files
     },
