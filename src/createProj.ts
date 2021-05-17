@@ -53,7 +53,7 @@ const checkMultipleWorkspaceAndGetProject = async (data: templatesJSON, template
             vscode.window.showErrorMessage(`Easy Project C++: Found error: ${err}`);
         }
     } else {
-        getProject(data, templateName, vscode.workspace.workspaceFolders[0].uri.fsPath);
+        await getProject(data, templateName, vscode.workspace.workspaceFolders[0].uri.fsPath);
     }
 };
 
