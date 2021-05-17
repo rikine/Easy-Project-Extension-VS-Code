@@ -10,7 +10,7 @@
     "typescript.tsc.autoDetect": "off",
     "gitflow4code.hotfixes": [
         {
-            "name": "hotfix/ReadMeAndUpload",
+            "name": "hotfix/changeNameOfExtension",
             "base": "main"
         }
     ]
