@@ -30,9 +30,11 @@
   </strong>
   <p>
     To create a project you should open a folder or workspace, enter ctrl + shift + p, type "Easy Project" and choose "Create Project". After that choose your platform and code!
-
+  </p>
+  <p>
     To change the executable name you should should open a folder or workspace with a project, enter ctrl + shift + p, type "Easy Project" and choose "Change name of executable". After that type a new name and done!
-
+  </p>
+  <p>
     To get the release or debug version of the executable you should should open a folder or workspace with a project, enter ctrl + shift + p, type "Easy Project" and choose "Set debug or release version". After that choose what you need and done!
   </p>
  </article>
