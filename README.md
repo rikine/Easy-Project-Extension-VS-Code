@@ -24,6 +24,8 @@ To **change the executable name** you should should open a folder or workspace w
 
 To **get the release or debug version** of the executable you should should open a folder or workspace with a project, enter ctrl + shift + p, type "Easy Project" and choose "Set debug or release version". After that choose what you need and done!
 
+To **allow multiple or single folders** in folder src you should open a folder or workspace with a project, enter ctrl + shift + p, type "Easy Project" and choose "Allow multiple folders in src". After choose  what you need and done!
+
 ### Additionally
 
 You can use any compiler but should change one line in Makefile.
