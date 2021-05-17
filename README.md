@@ -3,7 +3,7 @@
 
 <main>
   <article>
-    <strong>Requirements</strong>
+    <h3>Requirements</h3>
     <ul>
       <li>
         Mac OS with installed XCode or Developer Tools.
@@ -25,23 +25,23 @@
     </ul>
   </article>
  <article>
-  <strong>
+  <h3>
     How to use?
-  </strong>
+  </h3>
   <p>
-    To create a project you should open a folder or workspace, enter ctrl + shift + p, type "Easy Project" and choose "Create Project". After that choose your platform and code!
+    To <strong>create a project</strong> you should open a folder or workspace, enter ctrl + shift + p, type "Easy Project" and choose "Create Project". After that choose your platform and code!
   </p>
   <p>
-    To change the executable name you should should open a folder or workspace with a project, enter ctrl + shift + p, type "Easy Project" and choose "Change name of executable". After that type a new name and done!
+    To <strong>change the executable name</strong> you should should open a folder or workspace with a project, enter ctrl + shift + p, type "Easy Project" and choose "Change name of executable". After that type a new name and done!
   </p>
   <p>
-    To get the release or debug version of the executable you should should open a folder or workspace with a project, enter ctrl + shift + p, type "Easy Project" and choose "Set debug or release version". After that choose what you need and done!
+    To <strong>get the release or debug version</strong> of the executable you should should open a folder or workspace with a project, enter ctrl + shift + p, type "Easy Project" and choose "Set debug or release version". After that choose what you need and done!
   </p>
  </article>
  <article>
-   <strong>
+   <h3>
     Additionally
-   </strong>
+   </h3>
    <p>
     You can use any compiler but should change one line in Makefile.
    </p>
