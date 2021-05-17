@@ -18,7 +18,8 @@
   "activationEvents": [
     "onCommand:easy-project-c--.createProject",
     "onCommand:easy-project-c--.changeExecutable",
-    "onCommand:easy-project-c--.changeDebugOrRelease"
+    "onCommand:easy-project-c--.changeDebugOrRelease",
+    "workspaceContains:Makefile"
   ],
   "main": "./out/extension.js",
   "contributes": {
